@@ -8,7 +8,7 @@ const App = () => {
   const handleChange=(e)=>{
 
     const text=e.target.value;
-    setData(`Hello, ${text}!`)
+    setData(`Hello ${text}!`)
 
   }
   return (
