@@ -3,12 +3,20 @@ import React, { useState } from "react";
 import './../styles/App.css';
 
 const App = () => {
-  const[]=useState();
+  const[data,setData]=useState("");
+
+  const handleChange=(e)=>{
+
+    const text=e.target.value;
+    setData(`Hello, ${text}!`)
+
+  }
   return (
     <div>
         
-        <label for="">Enter your name:</label><br/>
-        <input type="text"/>
+        <label >Enter your name:</label><br/>
+        <input type="text" onChange={handleChange}/>
+        <p>{data}</p>
     </div>
   )
 }
